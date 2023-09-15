@@ -103,9 +103,9 @@ if(!isMobile){
 		scope.pauseBut.ontouchstart = ()=>{
 			scope.target.triggerKeyEvent('keydown', 'P'.charCodeAt(0));
 			setTimeout(()=>{scope.target.triggerKeyEvent('keyup', 'P'.charCodeAt(0))}, 50);
-			const bounds = scope.gameCanvas.getBoundingClientRect();
 			try{
 				if(scope.gameCanvas){
+					const bounds = scope.gameCanvas.getBoundingClientRect();
 					let touchEvent;
 					if(scope.isPaused){
 						touchEvent = new Event('touchend');
